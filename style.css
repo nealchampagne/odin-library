@@ -1,5 +1,87 @@
 * {
   box-sizing: border-box;
+}
+
+body, html {
   margin: 0;
   padding: 0;
+  border: none;
+}
+
+:root {
+  --text-color: hsl(15 40% 90%);
+  --bg-green: hsl(60 60% 40%);
+  --page-font: Roboto, sans-serif;
+}
+
+body {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: 10rem 1fr 5rem;
+}
+
+.header {
+  background: var(--bg-green);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.title {
+  color: var(--text-color);
+  font-family: var(--page-font);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.main {
+  background: hsl(15 60% 80%);
+  display: grid;
+  grid-template-rows: 1fr 2rem;
+  justify-items: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.newbookbtn {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-green);
+  color: var(--text-color);
+  font-family: var(--page-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.newbookbtn:hover {
+  text-decoration: underline;
+}
+
+.newbookbtn:active {
+  background: hsl(60 60% 30%);
+}
+
+.shelf {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.book {
+  border-left: 2rem solid hsl(15 60% 20%);
+  border-radius: 0.2rem;
+  background: hsl(20 40% 60%);
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  padding: 0.5rem;
+  height: 20rem;
+  width: 15rem;
+  color: var(--text-color);
+}
+
+.footer {
+  background: var(--bg-green);
 }
