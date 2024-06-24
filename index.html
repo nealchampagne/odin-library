@@ -20,5 +20,28 @@
   <div class="footer">
 
   </div>
+  <div class="modal">
+    <button class="closebtn">×</button>
+    <form id="newbookform">
+      <div class="field">
+        <label for="booktitle">TITLE<span aria-label="required">*</span></label>
+        <input id="booktitle" name="booktitle" type="text" required />
+      </div>
+      <div class="field">
+        <label for="author">AUTHOR<span aria-label="required">*</span></label>
+        <input id="author" name="author" type="text" required />
+      </div>
+      <div class="field">
+        <label for="pagecount">PAGES<span aria-label="required">*</span></label>
+        <input id="pagecount" name="pagecount" type="number" required />
+      </div>
+      <div class="checkbox">
+        <label for="haveread">READ?</label>
+        <input id="haveread" name="haveread" type="checkbox" />
+      </div>
+    </form>
+    <div class="require"><span aria-label="required">*</span> required field</div>
+    <button class="submitbtn" type="submit" form="newbookform">SUBMIT</button>
+  </div>
 </body>
 </html>
