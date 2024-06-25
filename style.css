@@ -42,13 +42,13 @@ body {
 .main {
   background: hsl(15 60% 80%);
   display: grid;
-  grid-template-rows: 1fr 2rem;
+  grid-template-rows: 1fr 4rem;
   justify-items: center;
   padding: 2rem;
 }
 
 .newbookbtn {
-  align-self: center;
+  align-self: start;
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -78,7 +78,6 @@ body {
   width: 15rem;
   color: var(--text-color);
   box-shadow: 5px 5px 5px var(--shadow-color);
-  transition: 50ms;
 }
 
 .bookread {
@@ -128,7 +127,7 @@ body {
 
 .modal {
   display: none;
-  grid-template-rows: 3rem 1fr 1.5rem 3rem;
+  grid-template-rows: 3rem 1fr 2rem 3rem;
   justify-items: start;
   position: fixed;
   z-index: 1;
@@ -201,6 +200,7 @@ input {
 .require {
   padding: 0 5rem;
   margin-bottom: 0.5rem;
+  font-family: var(--page-font);
 }
 
 .submitbtn {
@@ -217,6 +217,7 @@ input {
 
 span {
   color: red;
+  font-weight: 400;
 }
 
 input:hover {
