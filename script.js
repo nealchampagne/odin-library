@@ -79,16 +79,11 @@ closeBtn.onclick = () => {
   modal.style.display = 'none';
 };
 
-submitBtn.addEventListener('click', () => {
+document.addEventListener('submit', (event) => {
   const book = new Book (formTitle.value, formAuthor.value, formPages.value, haveRead.checked);
   book.addToLibrary();
   newBookForm.reset();
   updateShelf();
   modal.style.display = 'none';
+  event.preventDefault();
 });
-
-const hobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 310, 'Yes');
-
-hobbit.addToLibrary();
-
-updateShelf();
