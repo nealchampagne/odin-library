@@ -1,3 +1,5 @@
+/** Initialize Library array and grab essential DOM elements */
+
 const myLibrary = [];
 const shelf = document.querySelector('.shelf');
 const newBookBtn = document.querySelector('.newbookbtn');
@@ -10,6 +12,7 @@ const haveRead = document.getElementById('haveread');
 const newBookForm = document.getElementById('newbookform');
 const modal = document.querySelector('.modal');
 
+/** Book class with method to add self to library */
 
 class Book {
   constructor(title, author, pages, read) {
@@ -24,6 +27,8 @@ class Book {
     myLibrary.push(this);
   }
 };
+
+/** Keep shelf up to date when books are added/removed or read is toggled */
 
 const updateShelf = () => {
   while (shelf.firstChild) {
@@ -70,14 +75,21 @@ const updateShelf = () => {
   });
 }
 
+/** Show modal */
+
 newBookBtn.onclick = () => {
   modal.style.display = 'grid';
 };
+
+/** Hide modal and clear form */
 
 closeBtn.onclick = () => {
   newBookForm.reset();
   modal.style.display = 'none';
 };
+
+/** Override default behavior, create new book object from user input, 
+    push to library, update shelf, clear and hide form modal */
 
 document.addEventListener('submit', (event) => {
   const book = new Book (formTitle.value, formAuthor.value, formPages.value, haveRead.checked);

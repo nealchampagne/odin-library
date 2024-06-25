@@ -16,6 +16,8 @@ body, html {
   --shadow-color: hsl(0 0% 50%);
 }
 
+/** Static page styling */
+
 body {
   display: grid;
   width: 100vw;
@@ -47,24 +49,14 @@ body {
   padding: 2rem;
 }
 
-.newbookbtn {
-  align-self: start;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: var(--bg-green);
-  color: var(--text-color);
-  font-family: var(--page-font);
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
 .shelf {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
 }
+
+/** Styling for book cards */
 
 .book {
   border-left: 2rem solid hsl(15 60% 20%);
@@ -78,6 +70,22 @@ body {
   width: 15rem;
   color: var(--text-color);
   box-shadow: 5px 5px 5px var(--shadow-color);
+}
+
+.book > div {
+  font-family: var(--page-font);
+  font-weight: 700;
+}
+
+.deletebtn {
+  justify-self: end;
+  align-self: center;
+  background: none;
+  border: none;
+  margin-top: 0.5rem;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .bookread {
@@ -97,33 +105,24 @@ body {
   font-weight: bold;
 }
 
-.readtoggle:active {
-  background: hsl(20 40% 40%)
+.footer {
+  background: var(--bg-green);
 }
 
-.deletebtn {
-  justify-self: end;
-  align-self: center;
-  background: none;
+.newbookbtn {
+  align-self: start;
   border: none;
-  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-green);
   color: var(--text-color);
+  font-family: var(--page-font);
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.book > div {
-  font-family: var(--page-font);
-  font-weight: 700;
-}
 
-.book:hover {
-  box-shadow: 5px 5px 5px hsl(0 0 30%);
-}
-
-.footer {
-  background: var(--bg-green);
-}
+/** Pop-up form for entering new books */
 
 .modal {
   display: none;
@@ -220,6 +219,8 @@ span {
   font-weight: 400;
 }
 
+/** Dynamic styling */
+
 input:hover {
   background: hsl(0 0 95%);
 }
@@ -240,6 +241,14 @@ input:focus-visible {
   cursor: pointer;
 }
 
+.book:hover {
+  box-shadow: 5px 5px 5px hsl(0 0 30%);
+}
+
 .newbookbtn:active, .closebtn:active, .submitbtn:active {
   background: var(--active-green);
+}
+
+.readtoggle:active {
+  background: hsl(20 40% 40%)
 }
