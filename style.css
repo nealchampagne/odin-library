@@ -44,14 +44,26 @@ body {
 .main {
   background: hsl(15 60% 80%);
   display: grid;
-  grid-template-rows: 1fr 4rem;
+  grid-template-rows: 5rem 1fr;
   justify-items: center;
-  padding: 2rem;
+  padding: 2.5rem;
+}
+
+.newbookbtn {
+  align-self: start;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-green);
+  color: var(--text-color);
+  font-family: var(--page-font);
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .shelf {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 20rem);
   grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
 }
@@ -108,19 +120,6 @@ body {
 .footer {
   background: var(--bg-green);
 }
-
-.newbookbtn {
-  align-self: start;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  background: var(--bg-green);
-  color: var(--text-color);
-  font-family: var(--page-font);
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
 
 /** Pop-up form for entering new books */
 
